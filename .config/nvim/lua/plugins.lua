@@ -44,7 +44,9 @@ packer.init {
 packer.startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use 'nvim-lualine/lualine.nvim' -- Statusline
+  use { 'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  } -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'neovim/nvim-lspconfig' -- LSP
   use 'williamboman/nvim-lsp-installer'
