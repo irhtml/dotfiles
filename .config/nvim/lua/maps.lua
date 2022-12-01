@@ -61,7 +61,15 @@ keymap.set('n', '<A-j>', ':m .+1<CR>==', opts)
 keymap.set('n', '<A-k>', ':m .-2<CR>==', opts)
 keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", opts)
 keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", opts)
+-- Copilot
+keymap.set('i', '<leader>cn', '<Plug>(copilot-next)', opts)
+keymap.set('i', '<leader>cp', '<Plug>(copilot-previous)', opts)
+keymap.set('i', '<leader>cs', '<Plug>(copilot-suggest)', opts)
 
+-- Ctrl S Save
+keymap.set('n', '<C-s>', ':w<CR>', opts)
+keymap.set('i', '<C-s>', '<Esc>:w<CR>', opts)
+keymap.set('v', '<C-s>', '<Esc>:w<CR>', opts)
 
 -- Soure MYVIMRC
 keymap.set('n', '<leader><leader>', ':source $MYVIMRC<CR>', opts)
