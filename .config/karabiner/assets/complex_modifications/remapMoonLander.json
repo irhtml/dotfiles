@@ -1,0 +1,58 @@
+{
+  "title": "Moonlander remaps",
+  "rules": [
+    {
+      "description": "remaps for the moonlander keyboard",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": ["right_alt"]
+            },
+            "key_code": "7"
+          },
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "8",
+              "modifiers": ["left_alt", "left_shift"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": ["right_alt"]
+            },
+            "key_code": "0"
+          },
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "9",
+              "modifiers": ["left_alt", "left_shift"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": ["right_alt"]
+            },
+            "key_code": "non_us_backslash"
+          },
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "7",
+              "modifiers": ["left_alt"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
