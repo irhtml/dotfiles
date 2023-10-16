@@ -1,0 +1,99 @@
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set surround
+set which-key
+set multiple-cursors
+Plug 'tpope/vim-commentary'
+set argtextobj
+"set easymotion
+set textobj-entire
+set ReplaceWithRegister
+set exchange
+Plug 'preservim/nerdtree'" Trying the new syntax
+
+Plug machakann/vim-highlightedyank'
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+" <C-n> seems to me as a better solution than <M-n>,
+" but we should finally support vim-visual-multi because vim-multiple-cursors is deprecated now
+map <C-n> <Plug>NextWholeOccurrence
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+set hlsearch
+set rnu
+""" Idea specific settings ------------------
+"set ideajoin
+
+"" My Mappings -----------------------------
+map <leader><leader> <Action>(GotoFile)
+map <leader>ff <Action>(GotoFile)
+map <leader>b <Action>(RecentFiles)
+map <leader>sw <Action>(TextSearchAction)
+map <leader>sg <Action>(FindInPath)
+map gw <Action>(FindWordAtCaret)
+map <a-j> <Action>(MoveStatementDown)
+map <a-k> <Action>(MoveStatementUp)
+map gcc <Action>(CommentByBlockComment)
+map gc <Action>(CommentByLineComment)
+map <leader>cd <Action>(ShowErrorDescription)
+map <leader>es <Action>(SelectInProjectView)
+
+map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>dO <Action>(StepOver)
+map <leader>di <Action>(StepInto)
+map <leader>do <Action>(StepOut)
+map <leader>dr <Action>(RunClass)
+map <leader>dR <Action>(DebugClass)
+map <leader>de <Action>(EvaluateExpression)
+map <leader>dp <Action>(ResumeProgram)
+map <leader>dh <Action>(ActivateDebugToolWindow)
+map <leader>dc <Action>(Continue)
+"map <Leader>fw <Action>(AceAction)
+" map <leader>e <Plug>(easymotion-f)
+"
+" map <leader>d <Action>(Debug)
+" map <leader>r <Action>(RenameElement)
+" map <leader>c <Action>(Stop)
+" map <leader>z <Action>(ToggleDistractionFreeMode)
+"
+" map <leader>s <Action>(SelectInProjectView)
+" map <leader>a <Action>(Annotate)
+" map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+" map <S-Space> <Action>(GotoNextError)
+
+" Reformat the current line only
+" map <leader>l V<Action>(ReformatCode)
+"
+" map <leader>b <Action>(ToggleLineBreakpoint)
+nmap <leader>e :NERDTreeToggle<CR>
+nmap <leader>fs <Action>(FileStructurePopup)
+map <leader>ca <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>fu <Action>(FindUsages)
+map <leader>ft <Action>(ActivateTerminalToolWindow)
+map <leader>wh <Action>(HideActiveWindow)
+" map <leader>J Ji <ESC>
+
+" Just makes me nervous
+" map H h
+map <S-h> <Action>(PreviousTab)
+map <S-l> <Action>(NextTab)
+map <leader>- <Action>(SplitHorizontally)
+map <leader>\| <Action>(SplitVertically)
+map <C-k> <C-w>k
+map <C-j> <C-w>j
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+" Toggle case and start typing. E.g. `<leader>iget`: `property` -> `getProperty`
+"map <leader>i ~hi
+" Remove selection and toggle case. E.g. `v2l<leader>u`: `getProperty` -> `property`
+"vmap <leader>u d~h
+
+" I think it's a better solution
+map U <C-R>
