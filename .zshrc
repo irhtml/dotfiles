@@ -130,7 +130,6 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 alias vim=nvim
-export OPENAI_API_KEY="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"
 
 # pnpm
 export PNPM_HOME="/Users/tobiasthunstrom/Library/pnpm"
